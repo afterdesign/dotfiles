@@ -5,5 +5,5 @@
       dest: "~/Library/Application Support/{{ item }}"
       state: link
     with_items:
-      - "Alfred 3"
+      - "Alfred"
     when: dropbox_synced_stat.stat.exists is defined and dropbox_synced_stat.stat.exists == True

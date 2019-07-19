@@ -1,6 +1,7 @@
 [user]
 	name = Rafal Malinowski
-	email = malinowski@red-sky.pl
+	email = rafal@malinowski.be
+	signingkey = AD0A08812D9433D8
 
 [color]
     ui = auto
@@ -82,3 +83,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	gpgsign = true
