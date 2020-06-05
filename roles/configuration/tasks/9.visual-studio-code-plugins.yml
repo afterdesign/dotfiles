@@ -31,7 +31,6 @@
       - karunamurti.haml
       - magicstack.MagicPython
       - marcostazi.VS-code-vagrantfile
-      - mauve.terraform
       - misogi.ruby-rubocop
       - ms-azuretools.vscode-docker
       - ms-python.python
@@ -42,7 +41,6 @@
       - raynigon.nginx-formatter
       - rebornix.ruby
       - redhat.vscode-yaml
-      - robinbentley.sass-indented
       - rupisaini.vscode-ansible-linter
       - secanis.jenkinsfile-support
       - thenikso.github-plus-theme

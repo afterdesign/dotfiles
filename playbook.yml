@@ -20,7 +20,5 @@
           - { name: "tflint", version: "0.16.1" }
 
   post_tasks:
-    - name: Use oh-my-zsh
-      shell: antigen use oh-my-zsh
     - name: Cleanup brew
       command: brew cleanup

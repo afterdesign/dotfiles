@@ -1,40 +1,40 @@
 ---
   - name: Install brew packages
     homebrew:
-      name: [
-        'antigen',
-        'asdf',
-        'autojump',
-        'awscli',
-        'bash',
-        'dialog',
-        'git',
-        'gpg',
-        'grv',
-        'htop',
-        'icdiff',
-        'jq',
-        'launchctl-completion',
-        'mas',
-        'mobile-shell',
-        'mtr',
-        'nano',
-        'ncdu',
-        'node',
-        'packer',
-        'pipenv',
-        'pngquant',
-        'python',
-        'rbenv',
-        'ruby-build',
-        'starship',
-        'telnet',
-        'tmux-xpanes',
-        'trash',
-        'tree',
-        'watch',
-        'wget',
-        'zsh',
-        'zsh-completions',
-        'zsh-syntax-highlighting'
-    ]
+      state: present
+      name:
+        - antigen
+        - asdf
+        - autojump
+        - awscli
+        - bash
+        - dialog
+        - git
+        - gpg
+        - grv
+        - htop
+        - icdiff
+        - jq
+        - launchctl-completion
+        - mas
+        - mobile-shell
+        - mtr
+        - nano
+        - ncdu
+        - node
+        - packer
+        - pipenv
+        - pngquant
+        - python
+        - rbenv
+        - ruby-build
+        - starship
+        - telnet
+        - tmux-xpanes
+        - trash
+        - tree
+        - watch
+        - wget
+        - zsh
+        - zsh-completions
+        - zsh-syntax-highlighting

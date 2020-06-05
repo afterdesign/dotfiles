@@ -17,14 +17,13 @@
 1. Install ansible:
 
     ```bash
-    brew install python
-    pip3 install ansible
+    brew install python@3.8 ansible
     ```
 
 1. Run ansible:
 
     ```bash
-    git clone git@github.com:afterdesign/dotfiles.git ~/.dotfiles
+    git clone https://github.com/afterdesign/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ansible-playbook --ask-become-pass -i local.hosts playbook.yml
     ```

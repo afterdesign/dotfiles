@@ -4,8 +4,8 @@
       path: ~/.config
       state: directory
 
-  - name: Link starhsip config
+  - name: Link starship config
     file:
-      src: "~/.dotfiles/symlinks/starhsip.toml"
+      src: "~/.dotfiles/symlinks/starship.toml"
       dest: "~/.config/starship.toml"
       state: link

@@ -3,8 +3,9 @@
     npm:
       global: yes
       state: latest
-      name:
-        - npm
-        - yarn
-        - curlx
-        - tldr
+      name: "{{ item }}"
+    with_items:
+      - npm
+      - yarn
+      - curlx
+      - tldr
