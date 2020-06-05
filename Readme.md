@@ -21,12 +21,6 @@
     pip3 install ansible
     ```
 
-1. Install ansible plugins:
-
-    ```bash
-    ansible-galaxy install --force -r requirements.yml
-    ```
-
 1. Run ansible:
 
     ```bash
