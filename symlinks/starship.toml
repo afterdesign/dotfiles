@@ -1,0 +1,14 @@
+add_newline = false
+
+[character]
+symbol = "➜"
+
+[directory]
+truncation_length = 8
+truncate_to_repo = false
+
+[battery]
+disabled = true
+
+[aws]
+disabled = true

@@ -1,10 +1,10 @@
 ---
   - name: Install npm packages
     npm:
-      name: "{{ item }}"
       global: yes
       state: latest
-    with_items:
-      - npm
-      - curlx
-      - tldr
+      name:
+        - npm
+        - yarn
+        - curlx
+        - tldr

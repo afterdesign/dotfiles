@@ -1,12 +1,12 @@
 ---
-  - include: bash-symlinks.yml
-  - include: link-application-support.yml
-  - include: link-karabiner-configuration.yml
-  - include: load-controlplane-configuration.yml
-  - include: load-iterm2-configuration.yml
-  - include: load-moom-configuration.yml
-  - include: set-screenshot-path.yml
-  - include: visual-studio-code-plugins.yml
-
-  - name: Cleanup brew
-    command: brew cleanup
+  - include: 1.symlinks.yml
+  - include: 2.enable-sounds-codecs.yml
+  - include: 3.link-application-support.yml
+  - include: 4.link-karabiner-configuration.yml
+  - include: 5.load-controlplane-configuration.yml
+  - include: 6.load-iterm2-configuration.yml
+  - include: 7.load-moom-configuration.yml
+  - include: 8.set-screenshot-path.yml
+  - include: 9.visual-studio-code-plugins.yml
+  - include: 10.enable-boot-sound.yml
+  - include: 11.link-starship-configuration.yml

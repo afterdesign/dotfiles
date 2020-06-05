@@ -1,6 +1,0 @@
-# ls aliases
-alias ll='ls -lah --color'
-alias l='ls --color'
-alias ls='ls --color'
-
-alias cp='rsync -p'

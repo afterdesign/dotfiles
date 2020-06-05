@@ -1,87 +1,51 @@
 [user]
-	name = Rafal Malinowski
-	email = rafal@malinowski.be
-	signingkey = AD0A08812D9433D8
+name = Rafal Malinowski
+email = rafal@malinowski.be
+signingkey =
 
 [color]
-    ui = auto
+ui = auto
 
 [color "status"]
-    added = blue
-    changed = yellow
-    untracked = white ul
-
-[color "diff"]
-    meta = white bold
-    frag = magenta ul
-    old = red bold
-    new = green bold
+added = blue
+changed = yellow
+untracked = white ul
 
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+current = yellow reverse
+local = yellow
+remote = green
 
 [alias]
-    ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    fl = log -u
-    dlc = diff --cached HEAD^
-    grep = grep -Ii
-    la = "!git config -l | grep alias | cut -c 7-"
+ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\" [%cn] --decorate --date=short
+ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\"[%cn] --decorate --date=relative
 
-    st = status -sb
-    cl = clone
-    ci = commit
-    co = checkout
-    cb = checkout --track -b
-    br = branch
-    diff = diff --word-diff
-    dc = diff --cached
-    da = diff-add
+st = status -sb
+co = switch
+cb = switch -t -c
 
-    r = reset
-    r1 = reset HEAD^
-    r2 = reset HEAD^^
-    rh = reset --hard
-    rh1 = reset HEAD^ --hard
-    rh2 = reset HEAD^^ --hard
+da = diff-add
+diff = diff --word-diff
 
-    sl = stash list
-    sa = stash apply
-    ss = stash save
-    sp = stash pop
-
-    b = branch
-    bl = branch --all
-    bnm = branch --no-merged
-    bm = branch --merged
-    list-files = diff-tree --no-commit-id --name-only -r
+bl = branch --all
+bnm = branch --no-merged
+bm = branch --merged
+list-files = diff-tree --no-commit-id --name-only -r
 
 [core]
-    excludesfile = ~/.gitignore
+excludesfile = ~/.gitignore
 
-[diff]
-    tool = icdiff
-[difftool]
-    prompt = false
-[difftool "icdiff"]
-    cmd = icdiff $LOCAL $REMOTE | less -R
+[icdiff]
+options = --highlight --line-numbers
 
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
-[merge]
-	tool = Kaleidoscope
 [push]
-	default = simple
+default = simple
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
 [commit]
-	gpgsign = true
+gpgsign = true

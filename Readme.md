@@ -1,37 +1,40 @@
-## Dotfiles
+# Dotfiles
 
-My dotfiles for quick macOS/OS X.
+## Run
 
-## Run configuration
+1. Install CLI tools:
 
-1. Install xcode and CLI tools:
-
-    ```
+    ```bash
     xcode-select --install
+    ```
+
+1. Install homebrew:
+
+    ```bash
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
 1. Install ansible:
 
+    ```bash
+    brew install python
+    pip3 install ansible
     ```
-    sudo easy_install pip
-    pip install --user ansible
+
+1. Install ansible plugins:
+
+    ```bash
+    ansible-galaxy install --force -r requirements.yml
     ```
 
 1. Run ansible:
 
-    ```
+    ```bash
     git clone git@github.com:afterdesign/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    $(python -m site --user-base)/bin/ansible-playbook --ask-become-pass -i local.hosts playbook.yml
+    ansible-playbook --ask-become-pass -i local.hosts playbook.yml
     ```
 
-1. Cleanup:
-
-    ```
-    /usr/local/bin/pip list --user --format=freeze | xargs pip uninstall -y $1
-    sudo /usr/local/bin/pip uninstall -y pip
-    ```
-
-# License
+## License
 
 Licensed under the [MIT license](http://opensource.org/licenses/MIT).

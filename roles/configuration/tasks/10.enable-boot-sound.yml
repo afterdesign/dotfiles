@@ -1,0 +1,4 @@
+---
+- name: Enable boot sound
+  become: yes
+  shell: nvram StartupMute=%00

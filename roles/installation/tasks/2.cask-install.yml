@@ -1,0 +1,43 @@
+---
+  - name: Tap to cask drivers
+    homebrew_tap:
+      name: homebrew/cask-drivers
+      state: 'present'
+
+  - name: Install from cask
+    homebrew_cask:
+      state: present
+      ignore_errors: yes
+      name:
+        - '1password'
+        - '1password-cli'
+        - 'adobe-creative-cloud'
+        - 'alfred'
+        - 'android-platform-tools'
+        - 'cleanapp'
+        - 'discord'
+        - 'dropbox'
+        - 'docker'
+        - 'dockstation'
+        - 'firefox'
+        - 'font-fira-code'
+        - 'google-featured-photos'
+        - 'imageoptim'
+        - 'istat-menus'
+        - 'irccloud'
+        - 'iterm2'
+        - 'java'
+        - 'karabiner-elements'
+        - 'logitech-options'
+        - 'macdown'
+        - 'notion'
+        - 'plex-media-server'
+        - 'pocket-casts'
+        - 'slack'
+        - 'slite'
+        - 'spotify'
+        - 'telegram-desktop'
+        - 'transmit'
+        - 'vlc'
+        - 'visual-studio-code'
+        - 'zoomus'

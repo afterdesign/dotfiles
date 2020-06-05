@@ -2,10 +2,14 @@
   - name: Install brew packages
     homebrew:
       name: [
+        'antigen',
+        'asdf',
         'autojump',
         'awscli',
+        'bash',
         'dialog',
         'git',
+        'gpg',
         'grv',
         'htop',
         'icdiff',
@@ -18,15 +22,19 @@
         'ncdu',
         'node',
         'packer',
-        'packer-completion',
         'pipenv',
         'pngquant',
-        'python3',
+        'python',
         'rbenv',
         'ruby-build',
+        'starship',
+        'telnet',
         'tmux-xpanes',
         'trash',
         'tree',
         'watch',
-        'wget'
+        'wget',
+        'zsh',
+        'zsh-completions',
+        'zsh-syntax-highlighting'
     ]

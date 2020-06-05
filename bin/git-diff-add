@@ -38,6 +38,6 @@ for file in $FILES; do
         continue
     fi
 
-    git difftool "$file"
+    git icdiff "$file"
     ask $file
 done

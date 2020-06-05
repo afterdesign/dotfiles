@@ -1,21 +1,5 @@
 # ls aliases
 alias ll='ls -lahG'
 alias l='ls'
-
-alias cp='rsync -p --progress'
-
-# application aliases
-if [[ -e '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' ]]; then
-    alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-fi
-
-alias menu-clean='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user'
-
-function spotlight () {
-    sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-    killall SystemUIServer
-}
-
 alias pico="nano"
-
 alias imageoptim='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'

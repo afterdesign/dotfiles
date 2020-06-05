@@ -1,0 +1,80 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "GitHub Sharp",
+    "projectManager.git.baseFolders": [
+        "/Users/afterdesign/Projects"
+    ],
+    "projectManager.git.ignoredFolders": [
+        "repos"
+    ],
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        120
+    ],
+    "explorer.openEditors.visible": 0,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "gitlens.recentChanges.highlight.locations": [
+        "gutter",
+        "line",
+        "overview"
+    ],
+    "gitlens.codeLens.enabled": false,
+    "gitlens.blame.highlight.locations": [
+        "gutter",
+        "line",
+        "overview"
+    ],
+    "editor.renderWhitespace": "all",
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    },
+    "window.zoomLevel": 0,
+    "editor.renderControlCharacters": false,
+    "python.linting.pydocstyleEnabled": true,
+    "python.autoComplete.addBrackets": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.banditArgs": [
+        "-ll"
+    ],
+    "terraform.path": "/Users/afterdesign/.asdf/shims/terraform",
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "ansibleVault.keyfile": "$CASTLE_SECRETS_PATH/vault.key",
+    "terraform.lintConfig": "/Users/afterdesign/Projects/devops/terraform/.tflint.hcl",
+    "python.pythonPath": "/usr/local/opt/python@3.8/bin/python3",
+    "python.formatting.provider": "black",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "yaml.format.bracketSpacing": false,
+    "yaml.format.printWidth": 120,
+    "yaml.format.enable": false,
+    "terraform.lintPath": "/Users/afterdesign/.asdf/shims/tflint",
+    "python.jediEnabled": false,
+    "files.associations": {
+        "*.ctmpl": "hcl",
+        "*.tf": "terraform",
+        "*.tfvars": "terraform"
+    },
+    "editor.formatOnSave": true,
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.blackArgs": [
+        "--py36",
+        "-l 120"
+    ]
+}

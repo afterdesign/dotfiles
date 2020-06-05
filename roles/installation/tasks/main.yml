@@ -1,6 +1,4 @@
 ---
-  - include: install-homebrew.yml
-  - include: brew-install.yml
-  - include: cask-install.yml
-  - include: npm-install.yml
-  - include: pip-install.yml
+  - include: 1.brew-install.yml
+  - include: 2.cask-install.yml
+  - include: 3.npm-install.yml

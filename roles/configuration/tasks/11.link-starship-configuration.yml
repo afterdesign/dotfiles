@@ -1,0 +1,11 @@
+---
+  - name: Create .config directory
+    file:
+      path: ~/.config
+      state: directory
+
+  - name: Link starhsip config
+    file:
+      src: "~/.dotfiles/symlinks/starhsip.toml"
+      dest: "~/.config/starship.toml"
+      state: link

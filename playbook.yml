@@ -10,6 +10,17 @@
 
   roles:
     - installation
-    - bash
     - mas
     - configuration
+    - name: asdf
+      vars:
+        plugins:
+          - { name: "terraform", version: "0.12.26" }
+          - { name: "terraform-docs", version: "0.9.1" }
+          - { name: "tflint", version: "0.16.1" }
+
+  post_tasks:
+    - name: Use oh-my-zsh
+      shell: antigen use oh-my-zsh
+    - name: Cleanup brew
+      command: brew cleanup

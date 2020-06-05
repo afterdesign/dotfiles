@@ -1,0 +1,33 @@
+eval "$(starship init zsh)"
+
+setopt histignorespace
+
+if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
+  FPATH=/usr/local/share/zsh/site-functions:$FPATH
+fi
+
+source /usr/local/share/antigen/antigen.zsh
+
+antigen bundle autojump
+antigen bundle docker
+antigen bundle terraform
+antigen bundle rbenv
+antigen bundle git
+antigen bundle asdf
+antigen bundle python
+antigen bundle pip
+antigen bundle pipenv
+antigen bundle pylint
+antigen bundle aws
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
+
+export PATH='/usr/local/opt/python@3.8/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.dotfiles/bin'
+export EDITOR=nano
+export GPG_TTY=$(tty)
+export GIT_EDITOR=nano
+source ~/.aliases
+source ~/.hosts
+
+source /usr/local/opt/asdf/asdf.sh

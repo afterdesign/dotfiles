@@ -1,4 +1,0 @@
-[blog]
-localhost ansible_connection=local
-[blog-ovh]
-92.222.18.230
