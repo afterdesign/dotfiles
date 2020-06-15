@@ -1,6 +1,7 @@
 eval "$(starship init zsh)"
 
 setopt histignorespace
+SHOW_AWS_PROMPT=false
 
 fpath=(
   /usr/local/share/zsh-completions
@@ -8,7 +9,6 @@ fpath=(
   $fpath
 )
 
-source /usr/local/opt/asdf/asdf.sh
 source /usr/local/share/antigen/antigen.zsh
 
 antigen bundle autojump
@@ -25,9 +25,13 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
-export PATH='/usr/local/opt/python@3.8/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/rafalmalinowski/.dotfiles/bin'
+path=('/usr/local/opt/python@3.8/bin' '/usr/local/sbin' '/usr/local/bin' '/usr/bin' '/bin' '/sbin' '/Users/rafalmalinowski/.dotfiles/bin' $path)
+
 export EDITOR=nano
 export GPG_TTY=$(tty)
 export GIT_EDITOR=nano
+
 source ~/.aliases
 source ~/.hosts
+
+source /usr/local/opt/asdf/asdf.sh

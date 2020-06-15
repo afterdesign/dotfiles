@@ -51,6 +51,7 @@
       - wholroyd.jinja
       - william-voyek.vscode-nginx
       - wingrunr21.vscode-ruby
+      - hashicorp.terraform
 
   - name: Remove user settings
     file:

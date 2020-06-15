@@ -2,7 +2,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "GitHub Sharp",
     "projectManager.git.baseFolders": [
-        "/Users/afterdesign/Projects"
+        "/Users/rafalmalinowski/Projects"
     ],
     "projectManager.git.ignoredFolders": [
         "repos"
@@ -40,8 +40,10 @@
         ]
     },
     "terraform.languageServer": {
-        "enabled": true,
-        "args": []
+        "external": true,
+        "args": [
+            "serve"
+        ]
     },
     "window.zoomLevel": 0,
     "editor.renderControlCharacters": false,
@@ -51,12 +53,12 @@
     "python.linting.banditArgs": [
         "-ll"
     ],
-    "terraform.path": "/Users/afterdesign/.asdf/shims/terraform",
+    "terraform.path": "/Users/rafalmalinowski/.asdf/shims/terraform",
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "ansibleVault.keyfile": "$CASTLE_SECRETS_PATH/vault.key",
-    "terraform.lintConfig": "/Users/afterdesign/Projects/devops/terraform/.tflint.hcl",
+    "terraform.lintConfig": "/Users/rafalmalinowski/Projects/devops/terraform/.tflint.hcl",
     "python.pythonPath": "/usr/local/opt/python@3.8/bin/python3",
     "python.formatting.provider": "black",
     "editor.suggestSelection": "first",
@@ -64,7 +66,7 @@
     "yaml.format.bracketSpacing": false,
     "yaml.format.printWidth": 120,
     "yaml.format.enable": false,
-    "terraform.lintPath": "/Users/afterdesign/.asdf/shims/tflint",
+    "terraform.lintPath": "/Users/rafalmalinowski/.asdf/shims/tflint",
     "python.jediEnabled": false,
     "files.associations": {
         "*.ctmpl": "hcl",
