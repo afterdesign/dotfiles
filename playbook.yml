@@ -2,12 +2,6 @@
 - hosts: localhost
   gather_facts: yes
 
-  pre_tasks:
-    - name: Check if dropbox is synced
-      stat:
-        path: "~/Dropbox/system"
-      register: dropbox_synced_stat
-
   roles:
     - installation
     - configuration
