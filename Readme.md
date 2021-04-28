@@ -14,10 +14,11 @@
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
-1. Install ansible:
+1. Install ansible and dependencies:
 
     ```bash
-    brew install python@3.8 ansible
+    brew install python@3.9 ansible
+    ansible-galaxy install --force -r requirements.yml
     ```
 
 1. Run ansible:
@@ -31,3 +32,4 @@
 ## License
 
 Licensed under the [MIT license](http://opensource.org/licenses/MIT).
+

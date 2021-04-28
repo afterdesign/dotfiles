@@ -1,5 +1,6 @@
-# ls aliases
+#!/usr/bin/env bash
+
+set -Efo pipefail
+
 alias ll='ls -lahG'
-alias l='ls'
 alias pico="nano"
-alias imageoptim='/Applications/ImageOptim.app/Contents/MacOS/ImageOptim'

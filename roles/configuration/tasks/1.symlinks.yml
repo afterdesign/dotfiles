@@ -1,21 +1,19 @@
 ---
-  - name: Link dotfiles
-    file:
-      src: "~/.dotfiles/symlinks/{{ item }}"
-      dest: "~/.{{ item }}"
-      state: link
-    with_items:
-      - aliases
-      - gitconfig
-      - gitignore
-      - nanorc
-      - zshrc
+- name: Link global configs
+  ansible.builtin.file:
+    src: "~/.dotfiles/symlinks/{{ item }}"
+    dest: "~/.{{ item }}"
+    state: link
+  with_items:
+    - gitconfig
+    - gitignore
+    - nanorc
+    - zshrc
 
-  - name: Link system files from dropbox
-    file:
-      src: "~/Dropbox/system/dotfiles/symlinks/{{ item }}"
-      dest: "~/.{{ item }}"
-      state: link
-    with_items:
-      - hosts
-    when: dropbox_synced_stat.stat.exists is defined and dropbox_synced_stat.stat.exists == True
+- name: Link dotfiles
+  ansible.builtin.file:
+    src: "~/.dotfiles/symlinks/{{ item }}"
+    dest: "~/.{{ item }}.dot"
+    state: link
+  with_items:
+    - aliases

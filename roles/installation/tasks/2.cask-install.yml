@@ -1,45 +1,38 @@
 ---
-  - name: Brew tap
-    homebrew_tap:
-      name:
-        - homebrew/cask-drivers
-        - homebrew/cask-fonts
-      state: 'present'
+- name: Brew tap
+  community.general.homebrew_tap:
+    state: present
+    name:
+      - homebrew/cask-drivers
+      - homebrew/cask-fonts
 
-  - name: Install from cask
-    ignore_errors: yes
-    homebrew_cask:
-      state: present
-      name:
-        - 1password
-        - 1password-cli
-        - adobe-creative-cloud
-        - alfred
-        - android-platform-tools
-        - cleanapp
-        - discord
-        - dropbox
-        - docker
-        - dockstation
-        - firefox
-        - font-fira-code
-        - google-featured-photos
-        - imageoptim
-        - istat-menus
-        - irccloud
-        - iterm2
-        - java
-        - karabiner-elements
-        - logitech-options
-        - macdown
-        - notion
-        - plex-media-server
-        - pocket-casts
-        - slack
-        - slite
-        - spotify
-        - telegram-desktop
-        - transmit
-        - vlc
-        - visual-studio-code
-        - zoomus
+- name: Install from cask
+  ignore_errors: yes
+  community.general.homebrew:
+    state: present
+    notify:
+      - Cleanup packages
+    name:
+      - 1password
+      - 1password-cli
+      - adobe-creative-cloud
+      - alfred
+      - android-platform-tools
+      - cleanapp
+      - discord
+      - docker
+      - fellow
+      - firefox
+      - font-fira-code
+      - iterm2
+      - logitech-options
+      - notion
+      - openvpn-connect
+      - signal
+      - slack
+      - slite
+      - spotify
+      - ticktick
+      - typora
+      - visual-studio-code
+      - zoom

@@ -1,12 +1,6 @@
 ---
-  - include: 1.symlinks.yml
-  - include: 2.enable-sounds-codecs.yml
-  - include: 3.link-application-support.yml
-  - include: 4.link-karabiner-configuration.yml
-  - include: 5.load-controlplane-configuration.yml
-  - include: 6.load-iterm2-configuration.yml
-  - include: 7.load-moom-configuration.yml
-  - include: 8.set-screenshot-path.yml
-  - include: 9.visual-studio-code-plugins.yml
-  - include: 10.enable-boot-sound.yml
-  - include: 11.link-starship-configuration.yml
+- include: 1.symlinks.yml
+- include: 2.load-iterm2-configuration.yml
+- include: 3.load-moom-configuration.yml
+- include: 4.set-screenshot-path.yml
+- include: 5.link-starship-configuration.yml

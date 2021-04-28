@@ -1,6 +1,0 @@
----
-  - name: Enable AAC
-    command: "defaults write bluetoothaudiod 'Enable AAC codec' -bool true"
-
-  - name: Enable AptX
-    command: "defaults write bluetoothaudiod 'Enable AptX codec' -bool true"

@@ -1,37 +1,33 @@
+HISTSIZE=100000
+SAVEHIST=100000
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+setopt share_history
+setopt inc_append_history
+
 eval "$(starship init zsh)"
 
-setopt histignorespace
-SHOW_AWS_PROMPT=false
-
-fpath=(
-  /usr/local/share/zsh-completions
-  /usr/local/share/zsh/site-functions
-  $fpath
-)
-
-source /usr/local/share/antigen/antigen.zsh
-
-antigen bundle autojump
-antigen bundle docker
-antigen bundle terraform
-antigen bundle rbenv
-antigen bundle git
-antigen bundle python
-antigen bundle pip
-antigen bundle pipenv
-antigen bundle pylint
-antigen bundle aws
-antigen bundle command-not-found
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen apply
-
-path=('/usr/local/opt/python@3.8/bin' '/usr/local/sbin' '/usr/local/bin' '/usr/bin' '/bin' '/sbin' '/Users/rafalmalinowski/.dotfiles/bin' $path)
-
 export EDITOR=nano
-export GPG_TTY=$(tty)
 export GIT_EDITOR=nano
+export GPG_TTY=$(tty)
+# export GOPATH=$(go env GOPATH)
 
-source ~/.aliases
-source ~/.hosts
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
+  autoload -Uz compinit
+  compinit
+fi
+
+path=('/usr/local/sbin' '/Users/rafal.malinowski/.dotfiles/bin' $path)
 source /usr/local/opt/asdf/asdf.sh
+
+for file in ~/.*.dot; do
+  source $file
+done
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/share/autojump/autojump.zsh
+
+export ANSIBLE_SSH_PRIVATE_KEY_FILE=~/.ssh/ec2_instance_connect_key

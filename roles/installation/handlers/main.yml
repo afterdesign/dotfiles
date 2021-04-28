@@ -1,0 +1,4 @@
+---
+- name: Cleanup packages
+  run_once: true
+  ansible.builtin.command: brew cleanup

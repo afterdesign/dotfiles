@@ -49,3 +49,6 @@ required = true
 
 [commit]
 gpgsign = true
+[pull]
+rebase = true
+ff = only

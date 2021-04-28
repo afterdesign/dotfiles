@@ -1,4 +1,0 @@
----
-  - name: Load moom configuration
-    command: "defaults import com.dustinrue.ControlPlane.plist ~/Dropbox/system/ControlPlane/com.dustinrue.ControlPlane.plist"
-    when: dropbox_synced_stat.stat.exists is defined and dropbox_synced_stat.stat.exists == True

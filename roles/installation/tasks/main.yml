@@ -1,4 +1,4 @@
 ---
-  - include: 1.brew-install.yml
-  - include: 2.cask-install.yml
-  - include: 3.npm-install.yml
+- include: 1.brew-install.yml
+- include: 2.cask-install.yml
+- include: 3.mas-install.yml

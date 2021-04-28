@@ -1,9 +1,0 @@
----
-  - name: Link app profiles
-    file:
-      src: "~/Dropbox/system/Library/{{ item }}"
-      dest: "~/Library/Application Support/{{ item }}"
-      state: link
-    with_items:
-      - "Alfred"
-    when: dropbox_synced_stat.stat.exists is defined and dropbox_synced_stat.stat.exists == True

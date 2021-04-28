@@ -6,11 +6,3 @@
   failed_when:
     - command_result.rc == 1
     - command_result.rc > 2
-
-- name: Install
-  shell: asdf install {{ item.name }} {{ item.version }}
-  with_items: "{{ plugins }}"
-
-- name: Set global version
-  shell: asdf global {{ item.name }} {{ item.version }}
-  with_items: "{{ plugins }}"

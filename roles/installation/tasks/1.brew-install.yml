@@ -1,40 +1,32 @@
 ---
-  - name: Install brew packages
-    homebrew:
-      state: present
-      name:
-        - antigen
-        - asdf
-        - autojump
-        - awscli
-        - bash
-        - dialog
-        - git
-        - gpg
-        - grv
-        - htop
-        - icdiff
-        - jq
-        - launchctl-completion
-        - mas
-        - mobile-shell
-        - mtr
-        - nano
-        - ncdu
-        - node
-        - packer
-        - pipenv
-        - pngquant
-        - python
-        - rbenv
-        - ruby-build
-        - starship
-        - telnet
-        - tmux-xpanes
-        - trash
-        - tree
-        - watch
-        - wget
-        - zsh
-        - zsh-completions
-        - zsh-syntax-highlighting
+- name: Install brew packages
+  community.general.homebrew:
+    state: present
+    notify:
+      - Cleanup packages
+    name:
+      - asdf
+      - autojump
+      - awscli
+      - awslogs
+      - bash
+      - dialog
+      - git
+      - gpg
+      - gh
+      - go
+      - htop
+      - icdiff
+      - java
+      - jq
+      - mas
+      - nano
+      - ncdu
+      - node
+      - python@3.9
+      - starship
+      - telnet
+      - tldr
+      - watch
+      - wget
+      - zsh-completions

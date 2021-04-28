@@ -1,0 +1,6 @@
+---
+- name: Create screenshots directory
+  file: path=~/Screenshots/ state=directory
+
+- name: Change screenshots directory
+  command: "defaults write com.apple.screencapture location ~/Screenshots/"

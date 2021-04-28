@@ -1,4 +1,0 @@
----
-  - name: Load iterm2 configuration
-    command: "defaults import com.googlecode.iterm2 ~/Dropbox/system/iterm2/com.googlecode.iterm2.plist"
-    when: dropbox_synced_stat.stat.exists is defined and dropbox_synced_stat.stat.exists == True

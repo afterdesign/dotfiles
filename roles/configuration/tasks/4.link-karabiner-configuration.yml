@@ -1,7 +1,0 @@
----
-  - name: Link karabiner-elements configuration
-    file:
-      src: "~/Dropbox/system/karabiner/"
-      dest: "~/.config/karabiner"
-      state: link
-    when: dropbox_synced_stat.stat.exists is defined and dropbox_synced_stat.stat.exists == True

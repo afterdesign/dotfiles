@@ -5,5 +5,4 @@ set noconvert
 set smooth
 set nohelp
 
-include "/usr/local/share/nano/php.nanorc"
-include "/usr/local/share/nano/python.nanorc"
+include "/usr/local/share/nano/*.nanorc"
