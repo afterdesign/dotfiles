@@ -8,6 +8,7 @@ setopt share_history
 setopt inc_append_history
 
 eval "$(starship init zsh)"
+eval "$(rbenv init -)"
 
 export EDITOR=nano
 export GIT_EDITOR=nano

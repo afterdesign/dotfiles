@@ -1,6 +1,4 @@
 ---
 - include: 1.symlinks.yml
-- include: 2.load-iterm2-configuration.yml
-- include: 3.load-moom-configuration.yml
-- include: 4.set-screenshot-path.yml
-- include: 5.link-starship-configuration.yml
+- include: 2.set-screenshot-path.yml
+- include: 3.link-starship-configuration.yml

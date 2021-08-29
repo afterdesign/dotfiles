@@ -1,3 +1,0 @@
----
-- name: Load moom configuration
-  ansible.builtin.command: "defaults import com.manytricks.Moom.plist ~/.dotfiles/roles/configuration/files/moom/com.manytricks.Moom.plist"

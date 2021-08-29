@@ -1,0 +1,12 @@
+---
+- name: Create screenshots directory
+  ansible.builtin.file:
+    path: "~/Screenshots/"
+    state: directory
+
+- name: Set screensthots path
+  community.general.osx_defaults:
+    domain: com.apple.screencapture
+    key: location
+    value: "~/Screenshots/"
+    state: present

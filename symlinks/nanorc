@@ -2,7 +2,6 @@ set tabstospaces
 set tabsize 4
 set historylog
 set noconvert
-set smooth
 set nohelp
 
 include "/usr/local/share/nano/*.nanorc"

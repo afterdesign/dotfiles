@@ -5,11 +5,14 @@
     notify:
       - Cleanup packages
     name:
+      - ansible
+      - ansible-lint
       - asdf
       - autojump
       - awscli
       - awslogs
       - bash
+      - bpython
       - dialog
       - git
       - gpg
@@ -24,7 +27,9 @@
       - ncdu
       - node
       - python@3.9
+      - shellcheck
       - starship
+      - telnet
       - telnet
       - tldr
       - watch

@@ -1,8 +1,3 @@
-[user]
-name = Rafal Malinowski
-email = rafal@malinowski.be
-signingkey =
-
 [color]
 ui = auto
 

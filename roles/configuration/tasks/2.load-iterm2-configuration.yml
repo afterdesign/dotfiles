@@ -1,3 +1,0 @@
----
-- name: Load iterm2 configuration
-  ansible.builtin.command: "defaults import com.googlecode.iterm2 ~/.dotfiles/roles/configuration/files/iterm2/com.googlecode.iterm2.plist"
