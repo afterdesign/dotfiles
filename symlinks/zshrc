@@ -1,29 +1,18 @@
-HISTSIZE=100000
-SAVEHIST=100000
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
-setopt share_history
-setopt inc_append_history
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+#HISTSIZE=100000
+#SAVEHIST=100000
+#setopt extended_history
+#setopt hist_expire_dups_first
+#setopt hist_ignore_dups
+#setopt hist_verify
+#setopt share_history
+#setopt inc_append_history
 
 eval "$(starship init zsh)"
-eval "$(rbenv init -)"
+source $(brew --prefix asdf)/libexec/asdf.sh
 
-export EDITOR=nano
-export GIT_EDITOR=nano
-export GPG_TTY=$(tty)
-# export GOPATH=$(go env GOPATH)
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
-path=('/usr/local/sbin' '/Users/rafal.malinowski/.dotfiles/bin' $path)
-source /usr/local/opt/asdf/asdf.sh
+path=('/usr/local/opt/e2fsprogs/sbin' '/usr/local/opt/e2fsprogs/bin' '/Users/rafalmalinowski/go/bin' '/usr/local/opt/python@3.10/Frameworks/Python.framework/Versions/3.10/bin' '/usr/local/sbin' '/Users/rafalmalinowski/.dotfiles/bin' $path)
 
 for file in ~/.*.dot; do
   source $file
@@ -31,4 +20,7 @@ done
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/share/autojump/autojump.zsh
 
-export ANSIBLE_SSH_PRIVATE_KEY_FILE=~/.ssh/ec2_instance_connect_key
+source /Users/rafalmalinowski/.config/op/plugins.sh
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

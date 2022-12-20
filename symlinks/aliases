@@ -2,5 +2,6 @@
 
 set -Efo pipefail
 
-alias ll='ls -lahG'
+#alias ll='ls -lahG'
+alias ll='exa -l'
 alias pico="nano"

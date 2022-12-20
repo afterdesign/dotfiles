@@ -8,10 +8,8 @@
 
 - name: Install from cask
   ignore_errors: yes
-  community.general.homebrew:
+  community.general.homebrew_cask:
     state: present
-    notify:
-      - Cleanup packages
     name:
       - 1password
       - 1password-cli
@@ -21,7 +19,7 @@
       - binance
       - cleanapp
       - discord
-      - docker
+      #- docker
       - dropbox
       - fellow
       - firefox
@@ -41,3 +39,5 @@
       - typora
       - visual-studio-code
       - zoom
+  notify:
+    - Cleanup packages

@@ -2,8 +2,6 @@
 - name: Install brew packages
   community.general.homebrew:
     state: present
-    notify:
-      - Cleanup packages
     name:
       - ansible
       - ansible-lint
@@ -28,6 +26,7 @@
       - ncdu
       - node
       - python@3.9
+      - rbenv
       - shellcheck
       - starship
       - telnet
@@ -36,3 +35,5 @@
       - watch
       - wget
       - zsh-completions
+  notify:
+    - Cleanup packages
